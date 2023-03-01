@@ -12,7 +12,7 @@
 	<atom:link href="/portfolio-category/hardware/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sat, 25 Feb 2023 05:24:33 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 26 Feb 2023 03:05:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,8 +28,120 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Autonomous Payload Delivery Drone</title>
+		<link>/projects/delivery-drone/</link>
+		
+		<dc:creator><![CDATA[dbiller]]></dc:creator>
+		<pubDate>Sat, 25 Feb 2023 18:26:56 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=726</guid>
+
+					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
+										<content:encoded><![CDATA[
+<h2>Summary</h2>
+
+
+
+<ul>
+<li><strong>What Is It?</strong> – Autonomous Drone for last-mile package delivery</li>
+
+
+
+<li><strong>Technologies Used</strong> – C++, Python, Raspberry Pi, PX4, Linux, ORBSlam 3.0</li>
+
+
+
+<li><strong>My Accomplishments</strong>
+<ul>
+<li>Decreased system unit cost by 40%</li>
+
+
+
+<li>Implemented many different software into a cohesive system</li>
+
+
+
+<li>Gathered technical requirements and design specifications</li>
+
+
+
+<li>Designed and actualized project from start to finish</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2>What It Does</h2>
+
+
+
+<h2>How I Did It</h2>
+
+
+
+<h2>Improvements I Made</h2>
+
+
+
+<h2>What I Learned</h2>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Real Time Systems Benchmark Tool</title>
+		<link>/projects/rtis-benchmarker/</link>
+		
+		<dc:creator><![CDATA[dbiller]]></dc:creator>
+		<pubDate>Sat, 25 Feb 2023 18:24:58 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=725</guid>
+
+					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
+										<content:encoded><![CDATA[
+<h2>Summary</h2>
+
+
+
+<ul>
+<li><strong>What Is It?</strong> – Benchmarking tool used to train AI to predict task overruns and  </li>
+
+
+
+<li><strong>Technologies Used</strong> – Java, FreeRTOS, MicroROS, Spike (RISCV-ISA-SIM), FPGA</li>
+
+
+
+<li><strong>My Accomplishments</strong>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2>What It Does</h2>
+
+
+
+<h2>How I Did It</h2>
+
+
+
+<h2>Improvements I Made</h2>
+
+
+
+<h2>What I Learned</h2>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Virtual Memory Simulator</title>
-		<link>/portfolio/virtual-memory-simulator/</link>
+		<link>/projects/virtual-memory-simulator/</link>
 		
 		<dc:creator><![CDATA[dbiller]]></dc:creator>
 		<pubDate>Sat, 25 Feb 2023 05:06:35 +0000</pubDate>
