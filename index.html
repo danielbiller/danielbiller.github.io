@@ -80,6 +80,11 @@ body.page-template-blog-layout:not(.home) header.entry-header .entry-title{
 /* Hide featured image at top of portfolio post page */
 figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 	display: none
+}
+
+/* Hide post date */
+.additional-posts.portfolio-related .posted-on {
+	display: none
 }</style>
 		</head>
 
@@ -109,7 +114,17 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="mobile-menu" aria-label="Mobile">
                                 <div class="menu-primary-container"><ul id="primary-menu" class="nav-menu main-menu-modal">
 <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-564 current_page_item menu-item-123"><a href="/" aria-current="page">Home</a></li>
-<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="/projects/">Projects</a></li>
+<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-728">
+<a href="/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="/projects/delivery-drone/">Autonomous Payload Delivery Drone</a></li>
+	<li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764"><a href="/projects/financial-analytics-microservice/">Financial Analytics Microservice</a></li>
+	<li id="menu-item-765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-765"><a href="/projects/particle-simulation/">Particle Simulation</a></li>
+	<li id="menu-item-766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="/projects/rtis-benchmarker/">Real Time Systems Benchmark Tool</a></li>
+	<li id="menu-item-767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-767"><a href="/projects/unix-shell-terminal/">Unix Shell Terminal</a></li>
+	<li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-768"><a href="/projects/virtual-memory-simulator/">Virtual Memory Simulator</a></li>
+</ul>
+</li>
 <li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="/about/">About Me</a></li>
 <li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="/contact/">Contact</a></li>
 </ul></div>                                <ul class="menu-search">
@@ -161,17 +176,15 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 	<div class="tc-wrapper">
 		        <div class="button-group filter-button-group">        
             <button data-filter="*" class="is-checked">All</button>
-            <button data-filter=".10_portfolio_categories">Computer Vision</button><button data-filter=".8_portfolio_categories">Hardware</button><button data-filter=".7_portfolio_categories">Software</button>        </div>            
+            <button data-filter=".10_portfolio_categories">Computer Vision</button><button data-filter=".8_portfolio_categories">Hardware</button><button data-filter=".7_portfolio_categories">Simulation</button>        </div>            
                                 
         <div class="gallery-wrap">
                                
-                <div class="gallery-img 7_portfolio_categories">
+                <div class="gallery-img ">
                                             <a href="/projects/financial-analytics-microservice/"><img width="800" height="800" src="/wp-content/uploads/2023/02/102820095020-800x800.jpg" class="attachment-perfect-portfolio-square size-perfect-portfolio-square wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/102820095020-800x800.jpg 800w, /wp-content/uploads/2023/02/102820095020-150x150.jpg 150w" sizes="(max-width: 800px) 100vw, 800px"></a>
                                         <div class="text-holder">
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/financial-analytics-microservice/">Financial Analytics Microservice</a></h2>
-                                                            <span class="sub-title">
-                                    <a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
@@ -182,7 +195,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/delivery-drone/">Autonomous Payload Delivery Drone</a></h2>
                                                             <span class="sub-title">
-                                    <a href="/portfolio-category/computer-vision/"><span>Computer Vision</span></a><a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
+                                    <a href="/portfolio-category/computer-vision/"><span>Computer Vision</span></a><a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/simulation/"><span>Simulation</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
@@ -193,18 +206,16 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/rtis-benchmarker/">Real Time Systems Benchmark Tool</a></h2>
                                                             <span class="sub-title">
-                                    <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
+                                    <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/simulation/"><span>Simulation</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
                                
-                <div class="gallery-img 7_portfolio_categories">
+                <div class="gallery-img ">
                                             <a href="/projects/unix-shell-terminal/"><img width="800" height="800" src="/wp-content/uploads/2023/02/gitshell-e1677359342257-800x800.png" class="attachment-perfect-portfolio-square size-perfect-portfolio-square wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/gitshell-e1677359342257-800x800.png 800w, /wp-content/uploads/2023/02/gitshell-e1677359342257-300x300.png 300w, /wp-content/uploads/2023/02/gitshell-e1677359342257-150x150.png 150w, /wp-content/uploads/2023/02/gitshell-e1677359342257-768x768.png 768w, /wp-content/uploads/2023/02/gitshell-e1677359342257-60x60.png 60w, /wp-content/uploads/2023/02/gitshell-e1677359342257.png 1008w" sizes="(max-width: 800px) 100vw, 800px"></a>
                                         <div class="text-holder">
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/unix-shell-terminal/">Unix Shell Terminal</a></h2>
-                                                            <span class="sub-title">
-                                    <a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
@@ -215,7 +226,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/virtual-memory-simulator/">Virtual Memory Simulator</a></h2>
                                                             <span class="sub-title">
-                                    <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
+                                    <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/simulation/"><span>Simulation</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
@@ -226,13 +237,13 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                         <div class="text-holder-inner">
                             <h2 class="gal-title"><a href="/projects/particle-simulation/">Particle Simulation – Computational Biomechanics Research</a></h2>
                                                             <span class="sub-title">
-                                    <a href="/portfolio-category/software/"><span>Software</span></a>                                </span>
+                                    <a href="/portfolio-category/simulation/"><span>Simulation</span></a>                                </span>
                                                     </div>
                     </div>
                 </div>
                     </div>
 <!-- .row .grid -->
-        	</div>
+        <a href="/projects" class="btn-readmore">All Projects</a>	</div>
 </section> <!-- .gallery-section -->
 	<section id="service_section" class="service-section">
 		<div class="tc-wrapper">

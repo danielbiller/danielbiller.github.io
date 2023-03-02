@@ -12,7 +12,7 @@
 	<atom:link href="/portfolio-category/hardware/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 26 Feb 2023 03:05:11 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 01 Mar 2023 03:31:50 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -237,7 +237,15 @@
 
 
 
-<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the&nbsp;<strong>virtual memory hierarchy</strong>&nbsp;that&nbsp;<strong>I would consider myself an expert.</strong>&nbsp;Additionally,&nbsp;<strong>I learned the importance of understanding a project’s requirements.</strong>&nbsp;Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also&nbsp;<strong>gain a better grasp of object-oriented best practices</strong>&nbsp;like abstraction and minimizing side effects.</p>
+<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the <strong>virtual memory hierarchy</strong> that <strong>I would consider myself an expert.</strong> Additionally, <strong>I learned the importance of understanding a project’s requirements.</strong> Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also <strong>gain a better grasp of object-oriented best practices</strong> like abstraction and minimizing side effects.</p>
+
+
+
+<h2>Link to Code</h2>
+
+
+
+<p>Because this is a school project, I had to make the GitHub repo private. This link gives read access to the repo without making it public. <a href="https://gitfront.io/r/danielbiller/4e3be0eeccbf49ccf096814a54b205ca45710a08/Virtual-Memory-Simulation/" target="_blank" rel="noreferrer noopener">Virtual Memory Simulation Code</a></p>
 ]]></content:encoded>
 					
 		

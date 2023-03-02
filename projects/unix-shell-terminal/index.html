@@ -80,6 +80,11 @@ body.page-template-blog-layout:not(.home) header.entry-header .entry-title{
 /* Hide featured image at top of portfolio post page */
 figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 	display: none
+}
+
+/* Hide post date */
+.additional-posts.portfolio-related .posted-on {
+	display: none
 }</style>
 		</head>
 
@@ -109,7 +114,17 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="mobile-menu" aria-label="Mobile">
                                 <div class="menu-primary-container"><ul id="primary-menu" class="nav-menu main-menu-modal">
 <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-123"><a href="/">Home</a></li>
-<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="/projects/">Projects</a></li>
+<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-728">
+<a href="/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="/projects/delivery-drone/">Autonomous Payload Delivery Drone</a></li>
+	<li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764"><a href="/projects/financial-analytics-microservice/">Financial Analytics Microservice</a></li>
+	<li id="menu-item-765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-765"><a href="/projects/particle-simulation/">Particle Simulation</a></li>
+	<li id="menu-item-766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="/projects/rtis-benchmarker/">Real Time Systems Benchmark Tool</a></li>
+	<li id="menu-item-767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-767"><a href="/projects/unix-shell-terminal/">Unix Shell Terminal</a></li>
+	<li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-768"><a href="/projects/virtual-memory-simulator/">Virtual Memory Simulator</a></li>
+</ul>
+</li>
 <li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="/about/">About Me</a></li>
 <li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="/contact/">Contact</a></li>
 </ul></div>                                <ul class="menu-search">
@@ -147,8 +162,6 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                 <div class="gallery-wrap">
             		<figure class="post-thumbnail"><img width="1008" height="700" src="/wp-content/uploads/2023/02/gitshell-e1677359342257-1008x700.png" class="attachment-perfect-portfolio-fullwidth size-perfect-portfolio-fullwidth wp-post-image" alt="" decoding="async" itemprop="image"></figure>    <div class="content-wrap-box">
         <header class="page-header">
-                        <span class="sub-title">
-                <a href="/portfolio-category/software/"><span>Software</span></a>            </span>
                         <h1 class="page-title"><span>Unix Shell Terminal</span></h1>
         </header>
         <div class="page-content">
@@ -171,7 +184,15 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 <li>
 <strong>My Accomplishments</strong>
 <ul>
-<li>
+<li>Gained expertise on the use of syscalls</li>
+
+
+
+<li>Understood process management and filesystem navigation</li>
+
+
+
+<li>Learned C++ during project</li>
 </ul>
 </li>
 </ul>
@@ -182,15 +203,55 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
+<p>This program implements many of the common Unix shell commands such as history, ps, pwd, cd, exit, kill, and others. It can be used as a fully functioning shell, allowing the user to navigate the filesystem, run programs, show active processes, and kill those processes.</p>
+
+
+
 <h2>How I Did It</h2>
 
 
 
-<h2>Improvements I Made</h2>
+<p>The project primarily relies on the use of syscalls (system calls). Each command simply takes in inputs, formats the syscall with arguments, and then calls the syscall. The hardest part was learning how each of the different syscalls work, and when to use them. Aside from that, I also implemented a command history system and a process tracking system.</p>
+
+
+
+<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-top" style="grid-template-columns:52% auto">
+<figure class="wp-block-media-text__media"><img decoding="async" width="1024" height="898" src="/wp-content/uploads/2023/03/shell-eyes-1024x898.png" alt="" class="wp-image-761 size-full" srcset="/wp-content/uploads/2023/03/shell-eyes-1024x898.png 1024w, /wp-content/uploads/2023/03/shell-eyes-300x263.png 300w, /wp-content/uploads/2023/03/shell-eyes-768x673.png 768w, /wp-content/uploads/2023/03/shell-eyes-68x60.png 68w, /wp-content/uploads/2023/03/shell-eyes.png 1176w" sizes="(max-width: 1024px) 100vw, 1024px"></figure><div class="wp-block-media-text__content">
+<p>The command history system was created by keeping a buffer of commands, and writing that to a file upon program termination. On startup, the file is read back in. This allows the user to show previous commands and also replay any command. This was easy to integrate into the rest of the system.</p>
+
+
+
+<p>The process tracking system was more difficult. I had to keep a vector of all processes spawned from the shell, and clear out a process anytime it sends an signal back to the shell that it has been killed. I then created the ps command by running through the current list of processes and pinging each one. If was still active, I displayed it.</p>
+</div>
+</div>
 
 
 
 <h2>What I Learned</h2>
+
+
+
+<p>One of the biggest things I learned from this project was C++. I had never used the language before. This was a school assignment and we were given the option to use C, Java, or C++. Since I was already familiar with the first two, I decided to challenge myself and try to complete the project in C++. I think having the other languages under my belt allowed me to pick this one up quickly, and I was able to complete the project plus the bonus.</p>
+
+
+
+<div class="wp-block-media-text alignwide is-stacked-on-mobile" style="grid-template-columns:49% auto">
+<figure class="wp-block-media-text__media"><img decoding="async" width="1024" height="700" src="/wp-content/uploads/2023/03/shell-kill-1024x700.png" alt="" class="wp-image-760 size-full" srcset="/wp-content/uploads/2023/03/shell-kill-1024x700.png 1024w, /wp-content/uploads/2023/03/shell-kill-300x205.png 300w, /wp-content/uploads/2023/03/shell-kill-768x525.png 768w, /wp-content/uploads/2023/03/shell-kill-88x60.png 88w, /wp-content/uploads/2023/03/shell-kill-367x252.png 367w, /wp-content/uploads/2023/03/shell-kill.png 1356w" sizes="(max-width: 1024px) 100vw, 1024px"></figure><div class="wp-block-media-text__content">
+<p>I also gained a much better understanding of how to interact with the operating system through syscalls. There were many simple syscalls used in my program such as the ones for reading files or directories. The most confusing part of the program for me was understanding how the fork syscall works. I don&#8217;t think it is very intuitive, but now that I understand it, I know it is very powerful.</p>
+</div>
+</div>
+
+
+
+<p>Learning these different syscalls, especially fork, allowed me to create a program the works with the operating system instead of just running on top of it. It also gives me a better idea of how other programs work under the cover.</p>
+
+
+
+<h2>Link to Code</h2>
+
+
+
+<p>Because this is a school project, I had to make the GitHub repo private. This link gives read access to the repo without making it public. <a href="https://gitfront.io/r/danielbiller/674355b8603b8cb5e3b302dd2d1ba1f560ab470e/Unix-Shell-Terminal/" target="_blank" rel="noreferrer noopener">Unix Shell Terminal Code</a></p>
         </div>
     </div>    
                 </div>
@@ -198,21 +259,6 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                     
         <div class="additional-posts portfolio-related">
     		<h2 class="title">Related Projects</h2>            <div class="block-wrap">
-    			                <div class="block">
-                    <figure class="post-thumbnail">
-        				<a href="/projects/particle-simulation/">
-                            <img width="367" height="252" src="/wp-content/uploads/2023/02/ezgif.com-resize-2-1-367x252.gif" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy">                        </a>
-                    </figure>
-    				<h3 class="block-title"><a href="/projects/particle-simulation/" rel="bookmark">Particle Simulation – Computational Biomechanics Research</a></h3> 
-                            <div class="entry-meta">
-                                <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/particle-simulation/">
-                                        <time class="entry-date published">February 24, 2023</time>
-                                    </a>
-                                </span>
-                            </div>
-                                    
-    			</div>
     			                <div class="block">
                     <figure class="post-thumbnail">
         				<a href="/projects/virtual-memory-simulator/">
@@ -237,6 +283,21 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
                                     <a href="/projects/rtis-benchmarker/">
+                                        <time class="entry-date published">February 25, 2023</time>
+                                    </a>
+                                </span>
+                            </div>
+                                    
+    			</div>
+    			                <div class="block">
+                    <figure class="post-thumbnail">
+        				<a href="/projects/financial-analytics-microservice/">
+                            <img width="367" height="252" src="/wp-content/uploads/2023/02/102820095020-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/102820095020-367x252.jpg 367w, /wp-content/uploads/2023/02/102820095020-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
+                    </figure>
+    				<h3 class="block-title"><a href="/projects/financial-analytics-microservice/" rel="bookmark">Financial Analytics Microservice</a></h3> 
+                            <div class="entry-meta">
+                                <span class="posted-on" itemprop="datePublished dateModified">
+                                    <a href="/projects/financial-analytics-microservice/">
                                         <time class="entry-date published">February 25, 2023</time>
                                     </a>
                                 </span>

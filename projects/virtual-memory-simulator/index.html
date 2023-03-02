@@ -80,6 +80,11 @@ body.page-template-blog-layout:not(.home) header.entry-header .entry-title{
 /* Hide featured image at top of portfolio post page */
 figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 	display: none
+}
+
+/* Hide post date */
+.additional-posts.portfolio-related .posted-on {
+	display: none
 }</style>
 		</head>
 
@@ -109,7 +114,17 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="mobile-menu" aria-label="Mobile">
                                 <div class="menu-primary-container"><ul id="primary-menu" class="nav-menu main-menu-modal">
 <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-123"><a href="/">Home</a></li>
-<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="/projects/">Projects</a></li>
+<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-728">
+<a href="/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="/projects/delivery-drone/">Autonomous Payload Delivery Drone</a></li>
+	<li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764"><a href="/projects/financial-analytics-microservice/">Financial Analytics Microservice</a></li>
+	<li id="menu-item-765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-765"><a href="/projects/particle-simulation/">Particle Simulation</a></li>
+	<li id="menu-item-766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="/projects/rtis-benchmarker/">Real Time Systems Benchmark Tool</a></li>
+	<li id="menu-item-767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-767"><a href="/projects/unix-shell-terminal/">Unix Shell Terminal</a></li>
+	<li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-768"><a href="/projects/virtual-memory-simulator/">Virtual Memory Simulator</a></li>
+</ul>
+</li>
 <li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="/about/">About Me</a></li>
 <li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="/contact/">Contact</a></li>
 </ul></div>                                <ul class="menu-search">
@@ -148,7 +163,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
             		<figure class="post-thumbnail"><img width="1400" height="700" src="/wp-content/uploads/2023/02/cache-1-1400x700.jpg" class="attachment-perfect-portfolio-fullwidth size-perfect-portfolio-fullwidth wp-post-image" alt="" decoding="async" itemprop="image"></figure>    <div class="content-wrap-box">
         <header class="page-header">
                         <span class="sub-title">
-                <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/software/"><span>Software</span></a>            </span>
+                <a href="/portfolio-category/hardware/"><span>Hardware</span></a><a href="/portfolio-category/simulation/"><span>Simulation</span></a>            </span>
                         <h1 class="page-title"><span>Virtual Memory Simulator</span></h1>
         </header>
         <div class="page-content">
@@ -246,7 +261,15 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the&nbsp;<strong>virtual memory hierarchy</strong>&nbsp;that&nbsp;<strong>I would consider myself an expert.</strong>&nbsp;Additionally,&nbsp;<strong>I learned the importance of understanding a project’s requirements.</strong>&nbsp;Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also&nbsp;<strong>gain a better grasp of object-oriented best practices</strong>&nbsp;like abstraction and minimizing side effects.</p>
+<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the <strong>virtual memory hierarchy</strong> that <strong>I would consider myself an expert.</strong> Additionally, <strong>I learned the importance of understanding a project’s requirements.</strong> Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also <strong>gain a better grasp of object-oriented best practices</strong> like abstraction and minimizing side effects.</p>
+
+
+
+<h2>Link to Code</h2>
+
+
+
+<p>Because this is a school project, I had to make the GitHub repo private. This link gives read access to the repo without making it public. <a href="https://gitfront.io/r/danielbiller/4e3be0eeccbf49ccf096814a54b205ca45710a08/Virtual-Memory-Simulation/" target="_blank" rel="noreferrer noopener">Virtual Memory Simulation Code</a></p>
         </div>
     </div>    
                 </div>
@@ -256,13 +279,13 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
     		<h2 class="title">Related Projects</h2>            <div class="block-wrap">
     			                <div class="block">
                     <figure class="post-thumbnail">
-        				<a href="/projects/delivery-drone/">
-                            <img width="367" height="252" src="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg 367w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-300x205.jpeg 300w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-1024x699.jpeg 1024w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-88x60.jpeg 88w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-749x516.jpeg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
+        				<a href="/projects/rtis-benchmarker/">
+                            <img width="367" height="252" src="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg 367w, /wp-content/uploads/2023/02/computer-cropped-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
                     </figure>
-    				<h3 class="block-title"><a href="/projects/delivery-drone/" rel="bookmark">Autonomous Payload Delivery Drone</a></h3> 
+    				<h3 class="block-title"><a href="/projects/rtis-benchmarker/" rel="bookmark">Real Time Systems Benchmark Tool</a></h3> 
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/delivery-drone/">
+                                    <a href="/projects/rtis-benchmarker/">
                                         <time class="entry-date published">February 25, 2023</time>
                                     </a>
                                 </span>
@@ -286,13 +309,13 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
     			</div>
     			                <div class="block">
                     <figure class="post-thumbnail">
-        				<a href="/projects/rtis-benchmarker/">
-                            <img width="367" height="252" src="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg 367w, /wp-content/uploads/2023/02/computer-cropped-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
+        				<a href="/projects/delivery-drone/">
+                            <img width="367" height="252" src="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg 367w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-300x205.jpeg 300w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-1024x699.jpeg 1024w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-88x60.jpeg 88w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-749x516.jpeg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
                     </figure>
-    				<h3 class="block-title"><a href="/projects/rtis-benchmarker/" rel="bookmark">Real Time Systems Benchmark Tool</a></h3> 
+    				<h3 class="block-title"><a href="/projects/delivery-drone/" rel="bookmark">Autonomous Payload Delivery Drone</a></h3> 
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/rtis-benchmarker/">
+                                    <a href="/projects/delivery-drone/">
                                         <time class="entry-date published">February 25, 2023</time>
                                     </a>
                                 </span>

@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>Software &#8211; Daniel Biller&#039;s Portfolio</title>
-	<atom:link href="/portfolio-category/software/feed/" rel="self" type="application/rss+xml" />
+	<title>Simulation &#8211; Daniel Biller&#039;s Portfolio</title>
+	<atom:link href="/portfolio-category/simulation/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 26 Feb 2023 03:05:16 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 01 Mar 2023 03:31:50 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -22,70 +22,12 @@
 
 <image>
 	<url>/wp-content/uploads/2023/02/transLogo-1-60x60.png</url>
-	<title>Software &#8211; Daniel Biller&#039;s Portfolio</title>
+	<title>Simulation &#8211; Daniel Biller&#039;s Portfolio</title>
 	<link>/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
-		<title>Financial Analytics Microservice</title>
-		<link>/projects/financial-analytics-microservice/</link>
-		
-		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 18:51:48 +0000</pubDate>
-				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=734</guid>
-
-					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
-										<content:encoded><![CDATA[
-<h2>Summary</h2>
-
-
-
-<ul>
-<li><strong>What Is It?</strong> – REST API for gathering statistics about Investment Portfolio Recommendation System</li>
-
-
-
-<li><strong>Technologies Used</strong> – TypeScript, Vue.js, Apollo, GraphQL, Swagger</li>
-
-
-
-<li><strong>My Accomplishments</strong>
-<ul>
-<li>My microservice was used in production to improve the Smart Advisory System, providing value to customers and increasing subscription sign-ups and renewals</li>
-
-
-
-<li>Gained hands-on experience with the Agile methodology</li>
-
-
-
-<li>Created customer facing documentation for new API</li>
-</ul>
-</li>
-</ul>
-
-
-
-<h2>What It Does</h2>
-
-
-
-<h2>How I Did It</h2>
-
-
-
-<h2>Improvements I Made</h2>
-
-
-
-<h2>What I Learned</h2>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
 		<title>Autonomous Payload Delivery Drone</title>
 		<link>/projects/delivery-drone/</link>
 		
@@ -167,56 +109,6 @@
 
 
 <li><strong>Technologies Used</strong> – Java, FreeRTOS, MicroROS, Spike (RISCV-ISA-SIM), FPGA</li>
-
-
-
-<li><strong>My Accomplishments</strong>
-<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-
-
-
-<h2>What It Does</h2>
-
-
-
-<h2>How I Did It</h2>
-
-
-
-<h2>Improvements I Made</h2>
-
-
-
-<h2>What I Learned</h2>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Unix Shell Terminal</title>
-		<link>/projects/unix-shell-terminal/</link>
-		
-		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 18:22:55 +0000</pubDate>
-				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=724</guid>
-
-					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
-										<content:encoded><![CDATA[
-<h2>Summary</h2>
-
-
-
-<ul>
-<li><strong>What Is It?</strong> – Custom Shell program implemented from scratch</li>
-
-
-
-<li><strong>Technologies Used</strong> – C++</li>
 
 
 
@@ -345,7 +237,15 @@
 
 
 
-<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the&nbsp;<strong>virtual memory hierarchy</strong>&nbsp;that&nbsp;<strong>I would consider myself an expert.</strong>&nbsp;Additionally,&nbsp;<strong>I learned the importance of understanding a project’s requirements.</strong>&nbsp;Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also&nbsp;<strong>gain a better grasp of object-oriented best practices</strong>&nbsp;like abstraction and minimizing side effects.</p>
+<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the <strong>virtual memory hierarchy</strong> that <strong>I would consider myself an expert.</strong> Additionally, <strong>I learned the importance of understanding a project’s requirements.</strong> Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also <strong>gain a better grasp of object-oriented best practices</strong> like abstraction and minimizing side effects.</p>
+
+
+
+<h2>Link to Code</h2>
+
+
+
+<p>Because this is a school project, I had to make the GitHub repo private. This link gives read access to the repo without making it public. <a href="https://gitfront.io/r/danielbiller/4e3be0eeccbf49ccf096814a54b205ca45710a08/Virtual-Memory-Simulation/" target="_blank" rel="noreferrer noopener">Virtual Memory Simulation Code</a></p>
 ]]></content:encoded>
 					
 		

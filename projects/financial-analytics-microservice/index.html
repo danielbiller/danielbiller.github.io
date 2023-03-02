@@ -80,6 +80,11 @@ body.page-template-blog-layout:not(.home) header.entry-header .entry-title{
 /* Hide featured image at top of portfolio post page */
 figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 	display: none
+}
+
+/* Hide post date */
+.additional-posts.portfolio-related .posted-on {
+	display: none
 }</style>
 		</head>
 
@@ -109,7 +114,17 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="mobile-menu" aria-label="Mobile">
                                 <div class="menu-primary-container"><ul id="primary-menu" class="nav-menu main-menu-modal">
 <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-123"><a href="/">Home</a></li>
-<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="/projects/">Projects</a></li>
+<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-728">
+<a href="/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="/projects/delivery-drone/">Autonomous Payload Delivery Drone</a></li>
+	<li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764"><a href="/projects/financial-analytics-microservice/">Financial Analytics Microservice</a></li>
+	<li id="menu-item-765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-765"><a href="/projects/particle-simulation/">Particle Simulation</a></li>
+	<li id="menu-item-766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="/projects/rtis-benchmarker/">Real Time Systems Benchmark Tool</a></li>
+	<li id="menu-item-767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-767"><a href="/projects/unix-shell-terminal/">Unix Shell Terminal</a></li>
+	<li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-768"><a href="/projects/virtual-memory-simulator/">Virtual Memory Simulator</a></li>
+</ul>
+</li>
 <li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="/about/">About Me</a></li>
 <li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="/contact/">Contact</a></li>
 </ul></div>                                <ul class="menu-search">
@@ -147,8 +162,6 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                 <div class="gallery-wrap">
             		<figure class="post-thumbnail"><img width="1280" height="700" src="/wp-content/uploads/2023/02/102820095020-1280x700.jpg" class="attachment-perfect-portfolio-fullwidth size-perfect-portfolio-fullwidth wp-post-image" alt="" decoding="async" itemprop="image"></figure>    <div class="content-wrap-box">
         <header class="page-header">
-                        <span class="sub-title">
-                <a href="/portfolio-category/software/"><span>Software</span></a>            </span>
                         <h1 class="page-title"><span>Financial Analytics Microservice</span></h1>
         </header>
         <div class="page-content">
@@ -164,7 +177,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 <li>
-<strong>Technologies Used</strong> – TypeScript, Vue.js, Apollo, GraphQL, Swagger</li>
+<strong>Technologies Used</strong> – TypeScript, Vue.js, GraphQL, Swagger</li>
 
 
 
@@ -186,7 +199,19 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<h2>What It Does</h2>
+<h2>Background</h2>
+
+
+
+<p>FactSet has a subscription based feature that provides Intelligent Notifications about a user&#8217;s portfolio. For example, an alert might say that stock A has an earnings report coming up, and this stock typically drops around earning, so the investor might want to sell. Another alert might be that stock B is outperforming its sector, so the investor might want to look into why and capitalize on that. This is very useful information. The problem is that not all alerts were useful. The purpose was to filter out useless information. When an alert is sent too often and is not important enough, it is not filtering out the useless information. My project was designed to fix the problem with these alerts.</p>
+
+
+
+<h2>Purpose</h2>
+
+
+
+<p>The purpose of my project was to help improve the value of these alerts and ensure that investors know that they are useful. I created an analytics microservice to gather statistics about our Intelligent Notification System. These statistics allowed us to tune the system, ensuring that the notifications were always high quality and relevant to the investor. This ultimately provided a greater value to investors using the system, increasing subscription sign-ups and renewals.</p>
 
 
 
@@ -194,11 +219,19 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<h2>Improvements I Made</h2>
+<p>I created a REST API microservice that was built with TypeScript. Unfortunately, I cannot share many of the details of this project because it is in a production system, but I can give a high level overview. My microservice was designed to gather statistics about the Intelligent Notification System and its usage. It would gather stats such as the rate that an alert fires in a particular sector, or how often an investor clicks on an alert. Many of these statistics were stored in other microservices. Others were derived statistics that required complex calculations. In the end, my system gathered all of these statistics and presented them in one consolidated location. These statistics were then used to tune the Intelligent Notification System to get closer to our target stats. This increased the value of the alerts and made investors less likely to ignore them.</p>
+
+
+
+<p>The schema for my service was defined using GraphQL. This allowed me to define the structure and types of the data that would be returned. It also helped when it came time to document my microservice, which I used Swagger to do. These two technologies allowed my API to be extensible and easily used; two things that are important in a corporate environment.</p>
 
 
 
 <h2>What I Learned</h2>
+
+
+
+<p>This project taught me a lot. It was my first time writing software in the real world, which brought lots of learning experiences. First, I learned how to integrate into a team and pick up all of the technologies and standards already being used. This was made even more challenging by the fact that the internship was completely remote, but it was a valuable experience that has already proven to be helpful. Second, I learned how to drive a project and deliver results in a short period of time. This is something that school did not prepare me for, since everything is already planned out and assigned. Getting the work done and making an impact on the team is something I am very proud of. Lastly, I learned how to work independently. I struggled at the beginning with asking too many questions and having trouble making progress. It was challenging, but I made big improvements by the end of the project which allowed me to work faster, more efficiently, and more independently.</p>
         </div>
     </div>    
                 </div>
@@ -206,6 +239,21 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                     
         <div class="additional-posts portfolio-related">
     		<h2 class="title">Related Projects</h2>            <div class="block-wrap">
+    			                <div class="block">
+                    <figure class="post-thumbnail">
+        				<a href="/projects/delivery-drone/">
+                            <img width="367" height="252" src="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-367x252.jpeg 367w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-300x205.jpeg 300w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-1024x699.jpeg 1024w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-88x60.jpeg 88w, /wp-content/uploads/2023/02/Drone-project-scaled-e1677356009354-749x516.jpeg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
+                    </figure>
+    				<h3 class="block-title"><a href="/projects/delivery-drone/" rel="bookmark">Autonomous Payload Delivery Drone</a></h3> 
+                            <div class="entry-meta">
+                                <span class="posted-on" itemprop="datePublished dateModified">
+                                    <a href="/projects/delivery-drone/">
+                                        <time class="entry-date published">February 25, 2023</time>
+                                    </a>
+                                </span>
+                            </div>
+                                    
+    			</div>
     			                <div class="block">
                     <figure class="post-thumbnail">
         				<a href="/projects/particle-simulation/">
@@ -223,28 +271,13 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
     			</div>
     			                <div class="block">
                     <figure class="post-thumbnail">
-        				<a href="/projects/virtual-memory-simulator/">
-                            <img width="367" height="252" src="/wp-content/uploads/2023/02/cache-1-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/cache-1-367x252.jpg 367w, /wp-content/uploads/2023/02/cache-1-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
+        				<a href="/projects/unix-shell-terminal/">
+                            <img width="367" height="252" src="/wp-content/uploads/2023/02/gitshell-e1677359342257-367x252.png" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/gitshell-e1677359342257-367x252.png 367w, /wp-content/uploads/2023/02/gitshell-e1677359342257-749x516.png 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
                     </figure>
-    				<h3 class="block-title"><a href="/projects/virtual-memory-simulator/" rel="bookmark">Virtual Memory Simulator</a></h3> 
+    				<h3 class="block-title"><a href="/projects/unix-shell-terminal/" rel="bookmark">Unix Shell Terminal</a></h3> 
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/virtual-memory-simulator/">
-                                        <time class="entry-date published">February 25, 2023</time>
-                                    </a>
-                                </span>
-                            </div>
-                                    
-    			</div>
-    			                <div class="block">
-                    <figure class="post-thumbnail">
-        				<a href="/projects/rtis-benchmarker/">
-                            <img width="367" height="252" src="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg 367w, /wp-content/uploads/2023/02/computer-cropped-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
-                    </figure>
-    				<h3 class="block-title"><a href="/projects/rtis-benchmarker/" rel="bookmark">Real Time Systems Benchmark Tool</a></h3> 
-                            <div class="entry-meta">
-                                <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/rtis-benchmarker/">
+                                    <a href="/projects/unix-shell-terminal/">
                                         <time class="entry-date published">February 25, 2023</time>
                                     </a>
                                 </span>
