@@ -12,7 +12,7 @@
 	<atom:link href="/portfolio-category/computer-vision/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 26 Feb 2023 02:56:34 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 21 Mar 2023 00:40:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1.1</generator>
 
 <image>
-	<url>/wp-content/uploads/2023/02/transLogo-1-60x60.png</url>
+	<url>/wp-content/uploads/2023/03/cropped-db-favacon-3-32x32.png</url>
 	<title>Computer Vision &#8211; Daniel Biller&#039;s Portfolio</title>
 	<link>/</link>
 	<width>32</width>
@@ -32,21 +32,21 @@
 		<link>/projects/delivery-drone/</link>
 		
 		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 18:26:56 +0000</pubDate>
+		<pubDate>Mon, 13 Mar 2023 18:26:56 +0000</pubDate>
 				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=726</guid>
 
-					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
+					<description><![CDATA[Summary Background Last mile deliveries (from warehouse to mailbox) are the most expensive part of delivery for businesses like Amazon. They also takes the greatest toll on society &#8211; using fossil fuels to power trucks, creating traffic in already congested areas, and filling landfills with the extra packaging needed to protect the goods during transit. &#8230; ]]></description>
 										<content:encoded><![CDATA[
 <h2>Summary</h2>
 
 
 
 <ul>
-<li><strong>What Is It?</strong> – Autonomous Drone for last-mile package delivery</li>
+<li><strong>What Is It?</strong>&nbsp;– Autonomous Drone for last-mile package delivery</li>
 
 
 
-<li><strong>Technologies Used</strong> – C++, Python, Raspberry Pi, PX4, Linux, ORBSlam 3.0</li>
+<li><strong>Technologies Used</strong>&nbsp;– C++, Python, Raspberry Pi, PX4, Linux, ORBSlam 3.0</li>
 
 
 
@@ -71,19 +71,103 @@
 
 
 
+<h2>Background</h2>
+
+
+
+<p>Last mile deliveries (from warehouse to mailbox) are the most expensive part of delivery for businesses like Amazon. They also takes the greatest toll on society &#8211; using fossil fuels to power trucks, creating traffic in already congested areas, and filling landfills with the extra packaging needed to protect the goods during transit. Drones like the one we created for our senior project are able to solve all of these problems, helping both the businesses and society as a whole.</p>
+
+
+
 <h2>What It Does</h2>
 
 
 
-<h2>How I Did It</h2>
+<p>This multirotor drone uses computer vision, GPS, and other sensor data to autonomously transport packages from a warehouse to a delivery destination, safely drop the package off, and then return to the warehouse for the next delivery.</p>
 
 
 
-<h2>Improvements I Made</h2>
+<h2>How We Did It</h2>
+
+
+
+<p>My team designed this drone from the ground up before ultimately building and testing it. The first step was to concretely lay out our requirements and design specifications. Our original goal was just to make a working delivery drone, but after researching the cost of parts, we decided to also strive to make the whole unit cheaper, as this would be a product with large volumes.</p>
+
+
+
+<p>Researching for this project was by far the biggest and most in depth analysis I have ever done. Together, my team contributed over 1000 hours of research to this project. Because the project was so open ended, and there were so many good options to use in our drone, it took a lot of work to select the perfect components for our system.</p>
+
+
+
+<p>At this point, drones, are so widespread and readily available, that our airframe was not the interesting part of the project. We did not do any special designing for this. We simply picked an airframe that would fit our needs, namely be able to carry a 0.5 pound package 10 miles round trip. We picked this number because a huge number of packages (over 2/3) are able under 0.5 lbs.</p>
+
+
+
+<div class="wp-block-media-text alignwide is-stacked-on-mobile is-image-fill" style="grid-template-columns:40% auto"><figure class="wp-block-media-text__media" style="background-image:url(/wp-content/uploads/2023/03/Picture2.png);background-position:50% 50%"><img decoding="async" width="422" height="542" src="/wp-content/uploads/2023/03/Picture2.png" alt="" class="wp-image-804 size-full" srcset="/wp-content/uploads/2023/03/Picture2.png 422w, /wp-content/uploads/2023/03/Picture2-234x300.png 234w, /wp-content/uploads/2023/03/Picture2-47x60.png 47w" sizes="(max-width: 422px) 100vw, 422px" /></figure><div class="wp-block-media-text__content">
+<p>At this point, drones, are so widespread and readily available, that our airframe was not the interesting part of the project. We did not do any special designing for this. We simply picked an airframe that would fit our needs, namely be able to carry a 0.5 pound package 10 miles round trip. We picked this number because a huge number of packages (over 2/3) are able under 0.5 lbs.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="857" height="508" src="/wp-content/uploads/2023/03/Picture1.png" alt="" class="wp-image-808" srcset="/wp-content/uploads/2023/03/Picture1.png 857w, /wp-content/uploads/2023/03/Picture1-300x178.png 300w, /wp-content/uploads/2023/03/Picture1-768x455.png 768w, /wp-content/uploads/2023/03/Picture1-101x60.png 101w" sizes="(max-width: 857px) 100vw, 857px" /></figure>
+</div></div>
+
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>The most interesting part of the project, and my specialty, was the computer vision. This is where I spent the majority of my time researching, testing and implementing. I decided that computer vision was a good idea for this project because lidar is so much more expensive. After much investigation, I concluded that SLAM (Simultaneous Localization and Mapping) would be the best computer vision algorithm for our purposes. This would allow us keep track of the drones position and orientation in space over large distances, as well as remember where it had been. It would also map obstacles in the environment to ensure that the drone does not collide or crash. For the project, we used ORB-SLAM 3.0. This is an open-source SLAM implementation that had the perfect balance of performance, features, and robustness. We ran this on a Raspberry Pi on top of a special real-time versions of Linux.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" width="828" height="446" src="/wp-content/uploads/2023/03/Picture3.png" alt="" class="wp-image-806" srcset="/wp-content/uploads/2023/03/Picture3.png 828w, /wp-content/uploads/2023/03/Picture3-300x162.png 300w, /wp-content/uploads/2023/03/Picture3-768x414.png 768w, /wp-content/uploads/2023/03/Picture3-111x60.png 111w" sizes="(max-width: 828px) 100vw, 828px" /></figure></div>
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Our flight control software was PX4, another open-source platform. It was relatively simple to set up and run on the Raspberry Pi. The challenging part was connecting it with our computer vision layer. When the camera detects an obstacle, how do we navigate around it? PX4 comes with a package that enables obstacle avoidance using a point-cloud. The problem is that it uses it&#8217;s own computer vision software and requires a stereo camera with depth sensors. These are very expensive, and we avoided them for the same reason as the lidar sensors. This meant that we had to modify the PX4 Obstacle Avoidance package to skip its own computer vision algorithm and instead take in the point-cloud from ORB-SLAM. This was very challenging and finnicky to get these programs to work together. We ultimately used ROS to communicate between them. This allowed us to finally do obstacle avoidance with a single camera.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img decoding="async" src="/wp-content/uploads/2023/03/Picture4-1024x758.png" alt="" class="wp-image-807" width="601" height="444" srcset="/wp-content/uploads/2023/03/Picture4-1024x758.png 1024w, /wp-content/uploads/2023/03/Picture4-300x222.png 300w, /wp-content/uploads/2023/03/Picture4-768x569.png 768w, /wp-content/uploads/2023/03/Picture4-81x60.png 81w, /wp-content/uploads/2023/03/Picture4.png 1064w" sizes="(max-width: 601px) 100vw, 601px" /></figure></div>
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>What I Achieved</h2>
+
+
+
+<p>The biggest accomplishment of the project was <strong>reducing the system cost by 40%</strong> through the use of computer vision rather than lidar or other expensive sensors. At the time of the project, the appropriate lidar sensors costed around $300. With the whole system costing around $700, this is a huge expense. Using a $10-$20 camera, we were able to reduce the unit cost by a huge amount, which helps to manufacture this product at a large scale and deploy it widely.</p>
+
+
+
+<p>Another part of the project I&#8217;m proud of is being able to connect many different software into a complete system. Many parts of the project were trivial to set up on their own. The challenge came from integrating them together. I am proud of the fact that I was able to get each part working with all the others, especially the obstacle avoidance software that I had to modify.</p>
 
 
 
 <h2>What I Learned</h2>
+
+
+
+<p>This project was a very open ended research project that required lots of planning and problem solving to complete successfully. With this being very similar to my <a rel="noreferrer noopener" href="/projects/rtis-research/" target="_blank">Real Time Systems Security Research</a>, I strengthened and improved many of the skills I learned from that project, namely: <strong>developing concreate requirements,</strong> <strong>researching complex open ended topics to get results</strong>, and <strong>designing a complete software system.</strong></p>
+
+
+
+<p>In addition to these skills, I also learned a lot from writing the research paper that went along with this senior project. It taught me how to <strong>clearly document technical details </strong>and <strong>effectively communicate ideas and impact in a way that non-technical stakeholders can understand.</strong></p>
+
+
+
+<p>Lastly, I strengthened my ability to <strong>integrate separate programs into the whole.</strong> This is something which is very important in creating a finished product. While I did gain some practice doing this in my other research projects, the delivery drone gave me much more of this valuable experience.</p>
+
+
+
+<p>Overall, this project has made me so much more <strong>confident with my general engineering ability,</strong> in addition to my programming skills.</p>
 ]]></content:encoded>
 					
 		

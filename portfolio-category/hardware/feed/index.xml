@@ -12,7 +12,7 @@
 	<atom:link href="/portfolio-category/hardware/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Wed, 01 Mar 2023 03:31:50 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 21 Mar 2023 00:40:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1.1</generator>
 
 <image>
-	<url>/wp-content/uploads/2023/02/transLogo-1-60x60.png</url>
+	<url>/wp-content/uploads/2023/03/cropped-db-favacon-3-32x32.png</url>
 	<title>Hardware &#8211; Daniel Biller&#039;s Portfolio</title>
 	<link>/</link>
 	<width>32</width>
@@ -32,21 +32,21 @@
 		<link>/projects/delivery-drone/</link>
 		
 		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 18:26:56 +0000</pubDate>
+		<pubDate>Mon, 13 Mar 2023 18:26:56 +0000</pubDate>
 				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=726</guid>
 
-					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
+					<description><![CDATA[Summary Background Last mile deliveries (from warehouse to mailbox) are the most expensive part of delivery for businesses like Amazon. They also takes the greatest toll on society &#8211; using fossil fuels to power trucks, creating traffic in already congested areas, and filling landfills with the extra packaging needed to protect the goods during transit. &#8230; ]]></description>
 										<content:encoded><![CDATA[
 <h2>Summary</h2>
 
 
 
 <ul>
-<li><strong>What Is It?</strong> – Autonomous Drone for last-mile package delivery</li>
+<li><strong>What Is It?</strong>&nbsp;– Autonomous Drone for last-mile package delivery</li>
 
 
 
-<li><strong>Technologies Used</strong> – C++, Python, Raspberry Pi, PX4, Linux, ORBSlam 3.0</li>
+<li><strong>Technologies Used</strong>&nbsp;– C++, Python, Raspberry Pi, PX4, Linux, ORBSlam 3.0</li>
 
 
 
@@ -71,53 +71,175 @@
 
 
 
+<h2>Background</h2>
+
+
+
+<p>Last mile deliveries (from warehouse to mailbox) are the most expensive part of delivery for businesses like Amazon. They also takes the greatest toll on society &#8211; using fossil fuels to power trucks, creating traffic in already congested areas, and filling landfills with the extra packaging needed to protect the goods during transit. Drones like the one we created for our senior project are able to solve all of these problems, helping both the businesses and society as a whole.</p>
+
+
+
 <h2>What It Does</h2>
 
 
 
-<h2>How I Did It</h2>
+<p>This multirotor drone uses computer vision, GPS, and other sensor data to autonomously transport packages from a warehouse to a delivery destination, safely drop the package off, and then return to the warehouse for the next delivery.</p>
 
 
 
-<h2>Improvements I Made</h2>
+<h2>How We Did It</h2>
+
+
+
+<p>My team designed this drone from the ground up before ultimately building and testing it. The first step was to concretely lay out our requirements and design specifications. Our original goal was just to make a working delivery drone, but after researching the cost of parts, we decided to also strive to make the whole unit cheaper, as this would be a product with large volumes.</p>
+
+
+
+<p>Researching for this project was by far the biggest and most in depth analysis I have ever done. Together, my team contributed over 1000 hours of research to this project. Because the project was so open ended, and there were so many good options to use in our drone, it took a lot of work to select the perfect components for our system.</p>
+
+
+
+<p>At this point, drones, are so widespread and readily available, that our airframe was not the interesting part of the project. We did not do any special designing for this. We simply picked an airframe that would fit our needs, namely be able to carry a 0.5 pound package 10 miles round trip. We picked this number because a huge number of packages (over 2/3) are able under 0.5 lbs.</p>
+
+
+
+<div class="wp-block-media-text alignwide is-stacked-on-mobile is-image-fill" style="grid-template-columns:40% auto"><figure class="wp-block-media-text__media" style="background-image:url(/wp-content/uploads/2023/03/Picture2.png);background-position:50% 50%"><img decoding="async" width="422" height="542" src="/wp-content/uploads/2023/03/Picture2.png" alt="" class="wp-image-804 size-full" srcset="/wp-content/uploads/2023/03/Picture2.png 422w, /wp-content/uploads/2023/03/Picture2-234x300.png 234w, /wp-content/uploads/2023/03/Picture2-47x60.png 47w" sizes="(max-width: 422px) 100vw, 422px" /></figure><div class="wp-block-media-text__content">
+<p>At this point, drones, are so widespread and readily available, that our airframe was not the interesting part of the project. We did not do any special designing for this. We simply picked an airframe that would fit our needs, namely be able to carry a 0.5 pound package 10 miles round trip. We picked this number because a huge number of packages (over 2/3) are able under 0.5 lbs.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="857" height="508" src="/wp-content/uploads/2023/03/Picture1.png" alt="" class="wp-image-808" srcset="/wp-content/uploads/2023/03/Picture1.png 857w, /wp-content/uploads/2023/03/Picture1-300x178.png 300w, /wp-content/uploads/2023/03/Picture1-768x455.png 768w, /wp-content/uploads/2023/03/Picture1-101x60.png 101w" sizes="(max-width: 857px) 100vw, 857px" /></figure>
+</div></div>
+
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>The most interesting part of the project, and my specialty, was the computer vision. This is where I spent the majority of my time researching, testing and implementing. I decided that computer vision was a good idea for this project because lidar is so much more expensive. After much investigation, I concluded that SLAM (Simultaneous Localization and Mapping) would be the best computer vision algorithm for our purposes. This would allow us keep track of the drones position and orientation in space over large distances, as well as remember where it had been. It would also map obstacles in the environment to ensure that the drone does not collide or crash. For the project, we used ORB-SLAM 3.0. This is an open-source SLAM implementation that had the perfect balance of performance, features, and robustness. We ran this on a Raspberry Pi on top of a special real-time versions of Linux.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" width="828" height="446" src="/wp-content/uploads/2023/03/Picture3.png" alt="" class="wp-image-806" srcset="/wp-content/uploads/2023/03/Picture3.png 828w, /wp-content/uploads/2023/03/Picture3-300x162.png 300w, /wp-content/uploads/2023/03/Picture3-768x414.png 768w, /wp-content/uploads/2023/03/Picture3-111x60.png 111w" sizes="(max-width: 828px) 100vw, 828px" /></figure></div>
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Our flight control software was PX4, another open-source platform. It was relatively simple to set up and run on the Raspberry Pi. The challenging part was connecting it with our computer vision layer. When the camera detects an obstacle, how do we navigate around it? PX4 comes with a package that enables obstacle avoidance using a point-cloud. The problem is that it uses it&#8217;s own computer vision software and requires a stereo camera with depth sensors. These are very expensive, and we avoided them for the same reason as the lidar sensors. This meant that we had to modify the PX4 Obstacle Avoidance package to skip its own computer vision algorithm and instead take in the point-cloud from ORB-SLAM. This was very challenging and finnicky to get these programs to work together. We ultimately used ROS to communicate between them. This allowed us to finally do obstacle avoidance with a single camera.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img decoding="async" src="/wp-content/uploads/2023/03/Picture4-1024x758.png" alt="" class="wp-image-807" width="601" height="444" srcset="/wp-content/uploads/2023/03/Picture4-1024x758.png 1024w, /wp-content/uploads/2023/03/Picture4-300x222.png 300w, /wp-content/uploads/2023/03/Picture4-768x569.png 768w, /wp-content/uploads/2023/03/Picture4-81x60.png 81w, /wp-content/uploads/2023/03/Picture4.png 1064w" sizes="(max-width: 601px) 100vw, 601px" /></figure></div>
+
+
+<div style="height:1em" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>What I Achieved</h2>
+
+
+
+<p>The biggest accomplishment of the project was <strong>reducing the system cost by 40%</strong> through the use of computer vision rather than lidar or other expensive sensors. At the time of the project, the appropriate lidar sensors costed around $300. With the whole system costing around $700, this is a huge expense. Using a $10-$20 camera, we were able to reduce the unit cost by a huge amount, which helps to manufacture this product at a large scale and deploy it widely.</p>
+
+
+
+<p>Another part of the project I&#8217;m proud of is being able to connect many different software into a complete system. Many parts of the project were trivial to set up on their own. The challenge came from integrating them together. I am proud of the fact that I was able to get each part working with all the others, especially the obstacle avoidance software that I had to modify.</p>
 
 
 
 <h2>What I Learned</h2>
+
+
+
+<p>This project was a very open ended research project that required lots of planning and problem solving to complete successfully. With this being very similar to my <a rel="noreferrer noopener" href="/projects/rtis-research/" target="_blank">Real Time Systems Security Research</a>, I strengthened and improved many of the skills I learned from that project, namely: <strong>developing concreate requirements,</strong> <strong>researching complex open ended topics to get results</strong>, and <strong>designing a complete software system.</strong></p>
+
+
+
+<p>In addition to these skills, I also learned a lot from writing the research paper that went along with this senior project. It taught me how to <strong>clearly document technical details </strong>and <strong>effectively communicate ideas and impact in a way that non-technical stakeholders can understand.</strong></p>
+
+
+
+<p>Lastly, I strengthened my ability to <strong>integrate separate programs into the whole.</strong> This is something which is very important in creating a finished product. While I did gain some practice doing this in my other research projects, the delivery drone gave me much more of this valuable experience.</p>
+
+
+
+<p>Overall, this project has made me so much more <strong>confident with my general engineering ability,</strong> in addition to my programming skills.</p>
 ]]></content:encoded>
 					
 		
 		
 			</item>
 		<item>
-		<title>Real Time Systems Benchmark Tool</title>
-		<link>/projects/rtis-benchmarker/</link>
+		<title>Real Time Systems Security Research</title>
+		<link>/projects/rtis-research/</link>
 		
 		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 18:24:58 +0000</pubDate>
+		<pubDate>Sun, 12 Mar 2023 18:24:58 +0000</pubDate>
 				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=725</guid>
 
-					<description><![CDATA[Summary What It Does How I Did It Improvements I Made What I Learned]]></description>
+					<description><![CDATA[Summary Motivation Historically, security has not been a priority in real-time systems, but this is not for lack of need. Real-time systems are becoming more common in safety-critical applications such as self driving cars. In these systems, malicious attacks can have serious, sometimes deadly, consequences. Implementing a security solution for real-time systems is not trivial, &#8230; ]]></description>
 										<content:encoded><![CDATA[
 <h2>Summary</h2>
 
 
 
 <ul>
-<li><strong>What Is It?</strong> – Benchmarking tool used to train AI to predict task overruns and  </li>
+<li><strong>What Is It?</strong> – Testbench used to train AI to detect security threats in safety-critical real-time systems  </li>
 
 
 
-<li><strong>Technologies Used</strong> – Java, FreeRTOS, MicroROS, Spike (RISCV-ISA-SIM), FPGA</li>
+<li><strong>Technologies Used</strong>&nbsp;– Java, FreeRTOS, MicroROS, Spike (RISCV-ISA-SIM), FPGA</li>
 
 
 
 <li><strong>My Accomplishments</strong>
 <ul>
-<li></li>
+<li>Developed concrete requirements by understanding motivation and goals</li>
+
+
+
+<li>Designed and implemented RTOS resource monitor testbench in software</li>
+
+
+
+<li>Successfully planned and transferred testbench from software to hardware, including physical coprocessor</li>
 </ul>
 </li>
 </ul>
+
+
+
+<h2>Motivation</h2>
+
+
+
+<p>Historically, security has not been a priority in real-time systems, but this is not for lack of need. Real-time systems are becoming more common in safety-critical applications such as self driving cars. In these systems, malicious attacks can have serious, sometimes deadly, consequences. Implementing a security solution for real-time systems is not trivial, however. Embedded systems do not have extra compute power to devote to complex security programs like desktop computers do. A security solution that does not impact performance is desperately needed for these safety critical systems.</p>
+
+
+
+<h2>Background</h2>
+
+
+
+<ul>
+<li>RTOS: A real-time operating system (RTOS) is an operating system for real-time computing applications that processes data and events which have critically defined time constraints.</li>
+
+
+
+<li>Mixed-criticality system: A system in which some tasks are high-criticality (must be completed) and some are low-criticality (acceptable to not finish)</li>
+
+
+
+<li>Mode-switch: When a low-criticality task overruns its deadline, the OS stops execution of low-criticality tasks and only executes high-criticality tasks. This is to ensure that the high-criticality tasks will finish by their deadline.</li>
+</ul>
+
+
+
+<p>This research project was based on the paper “Pythia-MCS: Enabling Quarter-Clairvoyance in I/O-Driven Mixed-Criticality Systems.” This paper uses a coprocessor to measure resource usage statistics and I/O volume. With this information, an AI is trained to predict task overruns and mode-switch before they occur. Doing this increases schedualability in the system.</p>
 
 
 
@@ -125,15 +247,47 @@
 
 
 
+<p>Our project extends this idea of overrun prediction by analyzing many different metrics such as resource usage and memory access patterns in real time. Using a coprocessor, our system detects and terminates security threats before they are able to cause damage.</p>
+
+
+
 <h2>How I Did It</h2>
 
 
 
-<h2>Improvements I Made</h2>
+<p>My role in this project was to architect and implement the technology stack we would use. After laying the foundation, my professor and his graduate student would use my setup to test and develop the security coprocessor. I did my part in three phases.</p>
+
+
+
+<p>First, I gathered requirements. This was relatively easy to do, because my team already had a good idea of the goals for the project. After a few discussions, we settled on our final requirements. I then used these to design an optimal system. My plan was to first create a proof-of-concept completely in software, as it is easier to iterate with. Once that was promising, we would then transfer it to the physical board.</p>
+
+
+
+<p>Second, I created the software testbench. I used Spike, which is an open source, RISCV instruction set architecture simulator. It would simulate the physical instructions that our processor would run. On top of this simulator, I ran FreeRTOS. This is an open source real-time operating system. This is a very common OS used in embedded systems. Lastly, on top of FreeRTOS, I ran microROS, which is a a commonly used open source robotics library. This would allow us to run our test cases easier. We could run microROS operations and then analyze the resource usage. To simulate the coprocessor, I wrote a python program. The program would essentially be a driver for Spike. It would have Spike execute one instruction, then analyze the output. I had the program log things like register values, memory addresses, instruction types, and I/O volume. From here, my team could use my tool to gather and analyze any information they wanted.</p>
+
+
+
+<p>Last, I set up the physical board. The hardware we decided on was the Xilinx Zynq-7000. This was perfect for our needs because it has an ARM CPU and FPGA in the same chip. Because they are on the same chip, the FPGA has access to the CPU’s hardware such as registers. The team would use the FPGA to create a coprocessor in hardware, while still being able to quickly iterate. All that was left was to install the software stack onto the board and then design the coprocessor. This is where I handed off my contribution to the others, and allowed them to get started on the analysis.</p>
 
 
 
 <h2>What I Learned</h2>
+
+
+
+<p>I learned to <strong>develop concreate requirements.</strong> Unlike school projects, the requirements were not handed to me. I had to understand the motivation and goals of the project, and come up with requirements that allowed us to achieve the goals. One thing that was important for me was to avoid thinking of implementation. This puts too many constraints on the project and can impede the goals. I learned that it is important to focus on the purpose of the project and leave implementation for later.</p>
+
+
+
+<p>I learned <strong>how to research a complex, open ended topic to get results.</strong> There were many different directions I could have gone with this project, and I ran into many dead ends. It was discouraging but a valuable learning experience. I learned to do preliminary research on a wide area and slowly narrow the scope as I learned more about my options.</p>
+
+
+
+<p>Lastly, I learned <strong>how to design a complete software system.</strong> Figuring out the overall architecture of a project, and how each piece will fit together, is much more challenging that writing a self contained program. I learned to consider how each piece fits together, which is something that came in handy with my <a href="/projects/delivery-drone/" target="_blank" rel="noreferrer noopener">Autonomous Delivery Drone</a> project.</p>
+
+
+
+<p>Overall, this project taught me a lot about the design and planning that goes into a large complex project.</p>
 ]]></content:encoded>
 					
 		
@@ -144,21 +298,17 @@
 		<link>/projects/virtual-memory-simulator/</link>
 		
 		<dc:creator><![CDATA[dbiller]]></dc:creator>
-		<pubDate>Sat, 25 Feb 2023 05:06:35 +0000</pubDate>
+		<pubDate>Thu, 23 Feb 2023 05:06:35 +0000</pubDate>
 				<guid isPermaLink="false">/?post_type=rara-portfolio#038;p=705</guid>
 
-					<description><![CDATA[I utilized Java to simulate a computer’s virtual memory. I then used my program to study the impacts of page size, cache size, and code localization on the computer’s performance. Summary What It Does The program simulates a series of memory accesses while keeping track of key performance statistics like hit rate and hard disk &#8230; ]]></description>
+					<description><![CDATA[The program simulates a series of memory accesses while keeping track of key performance statistics like hit rate and hard disk accesses.]]></description>
 										<content:encoded><![CDATA[
-<p>I utilized Java to simulate a computer’s virtual memory. I then used my program to study the impacts of page size, cache size, and code localization on the computer’s performance.</p>
-
-
-
 <h2>Summary</h2>
 
 
 
 <ul>
-<li><strong>What Is It?</strong>&nbsp;– Program to analyze cache hit-rate of memory access patterns</li>
+<li><strong>What Is It?</strong>&nbsp;– Program to analyze cache behavior based on memory access patterns</li>
 
 
 
@@ -201,7 +351,7 @@
 
 
 
-<p>I used this program to study how page size and cache size can impact the performance of a computer. In my case study, I tested 1000 random memory accesses of 8 pages versus 1000 random memory accesses from 9 pages. This seems like a tiny difference, but the outcome changed dramatically. The TLB hitrate dropped from 99% to only 87% because the data could no longer completely fit in cache.</p>
+<p><strong>I used this program to study how page size and cache size can impact the performance of a computer.</strong> In my case study, I tested 1000 random memory accesses of 8 pages versus 1000 random memory accesses from 9 pages. This seems like a tiny difference, but the outcome changed dramatically. The TLB hitrate dropped from 99% to only 87% because the data could no longer completely fit in cache.</p>
 
 
 
@@ -217,7 +367,7 @@
 
 
 
-<p>Additionally, I looked at how code localization can affect the speed at which that code runs. I simulated code jumping outside of its current block 25 times versus 400 times. This resulted in a hitrate decrease of 7.5% which would cause the code to execute more slowly.</p>
+<p><strong>Additionally, I looked at how code localization can affect the speed at which that code runs.</strong> I simulated code jumping outside of its current block 25 times versus 400 times. This resulted in a hitrate decrease of 7.5% which would cause the code to execute more slowly.</p>
 
 
 
@@ -237,7 +387,7 @@
 
 
 
-<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the <strong>virtual memory hierarchy</strong> that <strong>I would consider myself an expert.</strong> Additionally, <strong>I learned the importance of understanding a project’s requirements.</strong> Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also <strong>gain a better grasp of object-oriented best practices</strong> like abstraction and minimizing side effects.</p>
+<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the&nbsp;<strong>virtual memory hierarchy</strong>&nbsp;that&nbsp;<strong>I would consider myself an expert.</strong>&nbsp;Additionally,&nbsp;<strong>I learned the importance of understanding a project’s requirements.</strong>&nbsp;Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also&nbsp;<strong>gain a better grasp of object-oriented best practices</strong>&nbsp;like abstraction and minimizing side effects.</p>
 
 
 

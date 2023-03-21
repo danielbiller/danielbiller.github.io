@@ -51,10 +51,10 @@ img.emoji {
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fprojects%2Fvirtual-memory-simulator%2F">
 <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fprojects%2Fvirtual-memory-simulator%2F#038;format=xml">
 <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-<link rel="icon" href="/wp-content/uploads/2023/02/transLogo-1-60x60.png" sizes="32x32">
-<link rel="icon" href="/wp-content/uploads/2023/02/transLogo-1-300x300.png" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2023/02/transLogo-1-300x300.png">
-<meta name="msapplication-TileImage" content="/wp-content/uploads/2023/02/transLogo-1-300x300.png">
+<link rel="icon" href="/wp-content/uploads/2023/03/cropped-db-favacon-3-32x32.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2023/03/cropped-db-favacon-3-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2023/03/cropped-db-favacon-3-180x180.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2023/03/cropped-db-favacon-3-270x270.png">
 <style type="text/css" media="all">/*Typography*/
     body,
     button,
@@ -83,7 +83,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 }
 
 /* Hide post date */
-.additional-posts.portfolio-related .posted-on {
+.entry-meta {
 	display: none
 }</style>
 		</head>
@@ -98,7 +98,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             
                 <div class="site-branding logo-text" itemscope itemtype="https://schema.org/Organization">
                                             <div class="site-logo">
-                            <a href="/" class="custom-logo-link" rel="home"><img width="150" height="150" src="/wp-content/uploads/2023/02/transLogo-e1601164394933-1.png" class="custom-logo" alt="Daniel Biller&#039;s Portfolio" decoding="async" srcset="/wp-content/uploads/2023/02/transLogo-e1601164394933-1.png 150w, /wp-content/uploads/2023/02/transLogo-e1601164394933-1-60x60.png 60w" sizes="(max-width: 150px) 100vw, 150px"></a>                        </div>
+                            <a href="/" class="custom-logo-link" rel="home"><img width="150" height="150" src="/wp-content/uploads/2023/03/db-logo-e1679366590133.png" class="custom-logo" alt="Daniel Biller&#039;s Portfolio" decoding="async" srcset="/wp-content/uploads/2023/03/db-logo-e1679366590133.png 150w, /wp-content/uploads/2023/03/db-logo-e1679366590133-60x60.png 60w" sizes="(max-width: 150px) 100vw, 150px"></a>                        </div>
                                                                 <div class="site-title-wrap">
                                                                                                 <p class="site-title" itemprop="name"><a href="/" rel="home" itemprop="url">Daniel Biller&#039;s Portfolio</a></p>
                                                         </div>
@@ -168,17 +168,13 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
         </header>
         <div class="page-content">
             
-<p>I utilized Java to simulate a computer’s virtual memory. I then used my program to study the impacts of page size, cache size, and code localization on the computer’s performance.</p>
-
-
-
 <h2>Summary</h2>
 
 
 
 <ul>
 <li>
-<strong>What Is It?</strong>&nbsp;– Program to analyze cache hit-rate of memory access patterns</li>
+<strong>What Is It?</strong>&nbsp;– Program to analyze cache behavior based on memory access patterns</li>
 
 
 
@@ -225,7 +221,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<p>I used this program to study how page size and cache size can impact the performance of a computer. In my case study, I tested 1000 random memory accesses of 8 pages versus 1000 random memory accesses from 9 pages. This seems like a tiny difference, but the outcome changed dramatically. The TLB hitrate dropped from 99% to only 87% because the data could no longer completely fit in cache.</p>
+<p><strong>I used this program to study how page size and cache size can impact the performance of a computer.</strong> In my case study, I tested 1000 random memory accesses of 8 pages versus 1000 random memory accesses from 9 pages. This seems like a tiny difference, but the outcome changed dramatically. The TLB hitrate dropped from 99% to only 87% because the data could no longer completely fit in cache.</p>
 
 
 
@@ -241,7 +237,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<p>Additionally, I looked at how code localization can affect the speed at which that code runs. I simulated code jumping outside of its current block 25 times versus 400 times. This resulted in a hitrate decrease of 7.5% which would cause the code to execute more slowly.</p>
+<p><strong>Additionally, I looked at how code localization can affect the speed at which that code runs.</strong> I simulated code jumping outside of its current block 25 times versus 400 times. This resulted in a hitrate decrease of 7.5% which would cause the code to execute more slowly.</p>
 
 
 
@@ -261,7 +257,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
 
 
 
-<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the <strong>virtual memory hierarchy</strong> that <strong>I would consider myself an expert.</strong> Additionally, <strong>I learned the importance of understanding a project’s requirements.</strong> Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also <strong>gain a better grasp of object-oriented best practices</strong> like abstraction and minimizing side effects.</p>
+<p>Before writing this program I thought I had a good understanding of how virtual memory worked. In development I realized all the parts I overlooked. By the time I finished, I had gone over every detail and intricacy of the&nbsp;<strong>virtual memory hierarchy</strong>&nbsp;that&nbsp;<strong>I would consider myself an expert.</strong>&nbsp;Additionally,&nbsp;<strong>I learned the importance of understanding a project’s requirements.</strong>&nbsp;Many school assignments can be learned during development, but more complex projects need to be planned out and fully understood before starting. I also&nbsp;<strong>gain a better grasp of object-oriented best practices</strong>&nbsp;like abstraction and minimizing side effects.</p>
 
 
 
@@ -279,14 +275,14 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
     		<h2 class="title">Related Projects</h2>            <div class="block-wrap">
     			                <div class="block">
                     <figure class="post-thumbnail">
-        				<a href="/projects/rtis-benchmarker/">
+        				<a href="/projects/rtis-research/">
                             <img width="367" height="252" src="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg" class="attachment-perfect-portfolio-article size-perfect-portfolio-article wp-post-image" alt="" decoding="async" itemprop="image" loading="lazy" srcset="/wp-content/uploads/2023/02/computer-cropped-367x252.jpg 367w, /wp-content/uploads/2023/02/computer-cropped-749x516.jpg 749w" sizes="(max-width: 367px) 100vw, 367px">                        </a>
                     </figure>
-    				<h3 class="block-title"><a href="/projects/rtis-benchmarker/" rel="bookmark">Real Time Systems Benchmark Tool</a></h3> 
+    				<h3 class="block-title"><a href="/projects/rtis-research/" rel="bookmark">Real Time Systems Security Research</a></h3> 
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
-                                    <a href="/projects/rtis-benchmarker/">
-                                        <time class="entry-date published">February 25, 2023</time>
+                                    <a href="/projects/rtis-research/">
+                                        <time class="entry-date published">March 12, 2023</time>
                                     </a>
                                 </span>
                             </div>
@@ -301,7 +297,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
                                     <a href="/projects/particle-simulation/">
-                                        <time class="entry-date published">February 24, 2023</time>
+                                        <time class="entry-date published">March 14, 2023</time>
                                     </a>
                                 </span>
                             </div>
@@ -316,7 +312,7 @@ figure.post-thumbnail:has(img.attachment-perfect-portfolio-fullwidth){
                             <div class="entry-meta">
                                 <span class="posted-on" itemprop="datePublished dateModified">
                                     <a href="/projects/delivery-drone/">
-                                        <time class="entry-date published">February 25, 2023</time>
+                                        <time class="entry-date published">March 13, 2023</time>
                                     </a>
                                 </span>
                             </div>
